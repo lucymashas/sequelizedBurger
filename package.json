@@ -9,23 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucymashas/burger.git"
+    "url": "git+https://github.com/lucymashas/sequelizedBurger.git"
   },
   "keywords": [
-    "burger"
+    "Burger","Sequelize"
   ],
   "author": "Lucy Mashas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lucymashas/burger/issues"
+    "url": "https://github.com/lucymashas/seqelizedBurger/issues"
   },
-  "homepage": "https://github.com/lucymashas/burger#readme",
+  "homepage": "https://github.com/lucymashas/sequelizedBurger#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "sequelize": "^4.33.4"
   },
   "devDependencies": {}
 }
