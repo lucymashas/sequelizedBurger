@@ -32,10 +32,11 @@ app.put('/burgers/:id', function(req, res) {
     devoured: false
   },{
     where:{
-      id: req.body.id
+      id: req.params.id
     }
   }).then(function(dbBurger) {
     //  res.json(dbBurger);
+    
       res.redirect('/');
   })
   .catch(function(err){
