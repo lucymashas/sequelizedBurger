@@ -8,19 +8,19 @@ var db = require("../models/");
 module.exports = function(app) {
 // Routes
 app.get("/", function(req, res) {
-  db.Burger.findAll({
+  db.burgers.findAll({
   }).then(function(dbBurger) {
-    res.json(dbBurger);
+    res.render("index", { burger_data: dbBurger});
   });
 });
 
 
 app.post("/burgers", function(req, res) {
-  db.Burger.insert({
+  db.burgers.create({
     burger_name: req.body.burger,
     devoured: true
   }).then(function(dbBurger){
-        res.json(dbBurger);
+        // res.json(dbBurger);
         res.redirect("/");
        
   }); 
@@ -28,18 +28,22 @@ app.post("/burgers", function(req, res) {
 
 app.put('/burgers/:id', function(req, res) {
   // var condition = 'id = ' + req.params.id;
-  db.Burger.update({
+  db.burgers.update({
     devoured: false
   },{
     where:{
       id: req.body.id
     }
   }).then(function(dbBurger) {
-     res.json(dbBurger);
+    //  res.json(dbBurger);
       res.redirect('/');
+  })
+  .catch(function(err){
+    res.json(err);
   });
 });
-}
+};
+
 
 
 
