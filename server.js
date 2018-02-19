@@ -27,9 +27,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgersController.js");
+require("./controllers/burgersController.js")(app);
 
-app.use(routes);
+// app.use(routes);
 
 
 // Syncing our sequelize models and then starting our Express app

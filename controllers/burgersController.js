@@ -1,13 +1,13 @@
-var express = require("express");
+// var express = require("express");
 
-var router = express.Router();
+// var router = express.Router();
 
 // Import the model (burgers.js) to use its database functions.
 var db = require("../models/");
 
-
+module.exports = function(app) {
 // Routes
-router.get("/", function(req, res) {
+app.get("/", function(req, res) {
   db.Burger.findAll({
   }).then(function(dbBurger) {
     res.json(dbBurger);
@@ -15,7 +15,7 @@ router.get("/", function(req, res) {
 });
 
 
-router.post("/burgers", function(req, res) {
+app.post("/burgers", function(req, res) {
   db.Burger.insert({
     burger_name: req.body.burger,
     devoured: true
@@ -26,7 +26,7 @@ router.post("/burgers", function(req, res) {
   }); 
 });
 
-router.put('/burgers/:id', function(req, res) {
+app.put('/burgers/:id', function(req, res) {
   // var condition = 'id = ' + req.params.id;
   db.Burger.update({
     devoured: false
@@ -39,8 +39,10 @@ router.put('/burgers/:id', function(req, res) {
       res.redirect('/');
   });
 });
+}
+
 
 
 
 // Export routes for server.js to use.
-module.exports = router;
+// module.exports = router;
