@@ -7,8 +7,8 @@
     "dialect": "mysql"
   },
   "heroku": {
-    "username": "mci8qo4p4fgunkj2",
-    "password": "yar4odwyfow10szm",
+    "username": "vq6xfolb7fqdxrj9",
+    "password": "cvph62phlui8ljof",
     "database": "burgers_seq",
     "host": "y2w3wxldca8enczv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "JawsDB"
