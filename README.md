@@ -1,4 +1,4 @@
-# sequelizedBurger
+Sequelized Burger Application
 Eat Da Burger / using Sequelize
 Application With Node.js/Express/MySQL/Handlebars/
 
