@@ -6,7 +6,7 @@
     "host": "localhost",
     "dialect": "mysql"
   },
-  "deployment": {
+  "production": {
     "username": "by894npd2tdfwgfl",
     "password": "g6mko1am3jlshtp8",
     "database": "burgers_seq",
