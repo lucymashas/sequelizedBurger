@@ -1,7 +1,10 @@
 Sequelized Burger Application
 Eat Da Burger / using Sequelize
 
-Application With Node.js/Express/MySQL/Handlebars/
+Tehnology Stack:
+Node.js | Express |MySQL | Handlebars | Sequelize
+
+The MVC version without the use of sequelize could be found here:  https://github.com/lucymashas/burger
 
 Description
 This application demonstrates a simple full stack application with a front end implemented with HTML/CSS and the backend implemented with Node.js and Express. Templating is done with Handlebars.
