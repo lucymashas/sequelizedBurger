@@ -8,7 +8,7 @@ var db = require("../models/");
 module.exports = function(app) {
 // Routes
 app.get("/", function(req, res) {
-  db.burgers.findAll({
+  db.burger.findAll({
   }).then(function(dbBurger) {
     res.render("index", { burger_data: dbBurger});
   });
@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
 
 
 app.post("/burgers", function(req, res) {
-  db.burgers.create({
+  db.burger.create({
     burger_name: req.body.burger,
     devoured: true
   }).then(function(dbBurger){
@@ -28,7 +28,7 @@ app.post("/burgers", function(req, res) {
 
 app.put('/burgers/:id', function(req, res) {
   // var condition = 'id = ' + req.params.id;
-  db.burgers.update({
+  db.burger.update({
     devoured: false
   },{
     where:{
