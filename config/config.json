@@ -11,6 +11,7 @@
     "password": "g6mko1am3jlshtp8",
     "database": "burgers_seq",
     "host": "y2w3wxldca8enczv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "JawsDB"
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
